@@ -1,4 +1,4 @@
-/*import { Request, Response } from "express";
+import { Request, Response } from "express";
 import db from '../config/database';
 
 //Listar usuários
@@ -20,7 +20,7 @@ async function listCart(req: Request, res: Response){
      });
  }
  //Cadastrar Usuários
-async function createProduct(req: Request, res: Response) {
+async function createCart(req: Request, res: Response) {
     const querysql = `INSERT INTO cart (DS_NAME, DS_DESCRIPTION, NM_VALUE, DS_BRAND, DS_STATUS) 
     VALUES(?,?,?)`;
     const params = Array(
@@ -40,9 +40,9 @@ async function createProduct(req: Request, res: Response) {
     })
 }
 //Atualizar clientes
-async function editProduct(req: Request, res: Response) {
+async function editCart(req: Request, res: Response) {
     const idUser = req.params.id;
-    const querysql = `UPDATE product SET DS_NAME = ?,
+    const querysql = `UPDATE cart SET DS_NAME = ?,
     DS_DESCRIPTION = ?,NM_VALUE, DS_BRAND, FL_STATUS = ? WHERE ID_PRODUCT = ?`;
 
     const params = Array(
@@ -63,7 +63,7 @@ async function editProduct(req: Request, res: Response) {
 }
 
 //excluir usuários 
-async function deleteProduct (req:Request, res: Response) { 
+async function deleteCart (req:Request, res: Response) { 
     const queryString = `DELETE FROM product WHERE
     ID_PRODUCT = ?`;
     db.connection.query(queryString, [req.params.id], (err, results) => {
@@ -76,10 +76,9 @@ async function deleteProduct (req:Request, res: Response) {
 
 
 export default {
-    listProducts,
-    createProduct,
-    editProduct,
-    deleteProduct
+    listCart,
+    createCart,
+    editCart,
+    deleteCart
 }
 
-*/

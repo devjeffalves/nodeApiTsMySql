@@ -1,19 +1,18 @@
-/*Importar o pacote express para criar o servidor
+//Importar o pacote express para criar o servidor
 const express = require('express');
 //Instancia o express na variável router
 const router = express.Router();
 
-import clientsController from "../controller/cartController";
+import cartController from "../controller/cartController";
 
 //Listar usuários
-router.get('/clients', clientsController.listClients);
+router.get('/clients', cartController.listCart);
 
 //Cadastrar usuários
-router.post('/client/', clientsController.createClient);
+router.post('/client/', cartController.createCart);
 //Atualizar usuários
-router.put('/client/:id', clientsController.editClient);
+router.put('/client/:id', cartController.editCart);
 //excluir usuários
-router.delete('/client/:id', clientsController.deleteClient);
+router.delete('/client/:id', cartController.deleteCart);
 
 export default router;
-*/
