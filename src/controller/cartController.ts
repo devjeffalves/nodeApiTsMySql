@@ -39,7 +39,7 @@ async function createCart(req: Request, res: Response) {
         });
     })
 }
-//Atualizar clientes
+//Atualizar carrinho
 async function editCart(req: Request, res: Response) {
     const idUser = req.params.id;
     const querysql = `UPDATE cart SET DS_NAME = ?,

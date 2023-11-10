@@ -6,13 +6,12 @@ const router = express.Router();
 import cartController from "../controller/cartController";
 
 //Listar usuários
-router.get('/clients', cartController.listCart);
-
+router.get('/cart', cartController.listCart);
 //Cadastrar usuários
-router.post('/client/', cartController.createCart);
+router.post('/cart/', cartController.createCart);
 //Atualizar usuários
-router.put('/client/:id', cartController.editCart);
+router.put('/cart/:id', cartController.editCart);
 //excluir usuários
-router.delete('/client/:id', cartController.deleteCart);
+router.delete('/cart/:id', cartController.deleteCart);
 
 export default router;
